@@ -1,0 +1,3 @@
+[submodule "pet-media"]
+	path = pet-media
+	url = https://github.com/nogoegst/pet-media
