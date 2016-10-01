@@ -1,3 +1,6 @@
 [submodule "pet-media"]
 	path = pet-media
 	url = https://github.com/nogoegst/pet-media
+[submodule "cryptoparty-artwork"]
+	path = cryptoparty-artwork
+	url = https://github.com/cryptoparty/artwork
