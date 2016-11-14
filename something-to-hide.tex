@@ -1,0 +1,257 @@
+\input{nurslides.tex}
+
+\begin{document}
+
+%\pic{cryptoparty-artwork/cryptoparty_global_logos_icons/global.svg}
+\slide{\textit{Мне нечего скрывать}}
+\slide{\tiny{Лукавите. \\
+Говоря это, Вы говорите, что знаете будущее \\ и что может пойти не так.
+\\ }}
+\slide{\tiny{Времена \textit{целевой} слежки закончились. \\
+Добро пожаловать в мир \textit{массовой} слежки. \\
+}}
+\slide{\tiny{Массовая слежка \\ = \\ слежка за всеми \\}}
+\slide{Безопасность}
+\slide{\tiny{То, что находится между представлением того,
+ как работают вещи и как они работают \textit{на самом деле}. \\
+}}
+\slide{\tiny{Безопасность - не что-то, что можно \\ купить, скачать или установить} \\ }
+\slide{Безопасность - \\ это процесс}
+\slide{\textit{Интернет}}
+\slide{Интернет вошел в нашу жизнь}
+\slide{Классно, но что это за штука такая?}
+\slide{Как передается информация через Интернет?}
+\slide{Интернет - \\ сеть сетей}
+\slide{Передача \\ из одной сети \\ в другую}
+\slide{Через множество посредников}
+\pic{pet-media/internet/1.png}
+\pic{pet-media/internet/2.png}
+\slide{Отлично! \\ У нас есть Интернет!}
+\slide{Подождите...}
+\slide{Кто все эти посредники?}
+\slide{Интернет - сеть, \\ построенная на доверии}
+\slide{Которого нет.}
+\pic{pet-media/internet/3.png}
+\pic{pet-media/internet/4.png}
+\pic{pet-media/internet/5.png}
+\pic{pet-media/internet/6.png}
+\slide{Посредниками \\ могут быть \\ \textit{кто-угодно}}
+\slide{Как же быть?}
+\slide{Нам нужна Криптография}
+\slide{\tiny{Криптография - \\ методы безопасных коммуникаций} \\ }
+\slide{Что такое \\ шифрование?}
+\slide{Методы превращения полезной информации \\ в шум}
+\slide{Шум, в котором никто не разбирается, кроме Вас}
+\slide{\tiny{было: cu at cryptoparty \\ стало: 9d23fb0afafa37a57dafa \\}}
+\slide{\textit{"Шифрование - \\ это сложно"}}
+\slide{Компьютеры - это тоже сложно, но вы ими пользуетесь}
+\slide{пользоваться \\ ≠ \\ разбираться}
+\slide{\textit{"Шифрование - \\ для террористов \\ и военных"}}
+\slide{Так же как и ножи - \\ для убийц и маньяков}
+\slide{Шифрование - инструмент. \\ Не более, не менее.}
+\slide{\textit{Какое бывает шифрование?}}
+\slide{\textbf{Симметричное}}
+\slide{Единый ключ \\ на зашифровку \\ и на расшифровку}
+\slide{\textit{Почтовая аналогия}}
+\pic{pet-media/crypto/encryption/symmetric/1.png}
+\pic{pet-media/crypto/encryption/symmetric/2.png}
+\pic{pet-media/crypto/encryption/symmetric/3.png}
+\pic{pet-media/crypto/encryption/symmetric/4.png}
+\pic{pet-media/crypto/encryption/symmetric/5.png}
+\pic{pet-media/crypto/encryption/symmetric/6.png}
+\pic{pet-media/crypto/encryption/symmetric/7.png}
+\slide{\tiny{Например, симметричный ключ \\ выглядит так: \\
+e3594d0ce14fd79425921123d8ec81ea \\
+}}
+\slide{Да, но что, если Алиса не может встретится с Бобом \\ и передать ключ?}
+\slide{\textbf{Асимметричное} \\ \tiny{Криптосистема с публичным ключом}}
+\slide{\textcolor{sgreen}{Публичный ключ} \\ для зашифровки \\ \textcolor{sred}{Закрытый ключ} \\ для расшифровки}
+\slide{\textit{Почтовая аналогия}}
+\pic{pet-media/crypto/encryption/asymmetric/1.png}
+\pic{pet-media/crypto/encryption/asymmetric/2.png}
+\pic{pet-media/crypto/encryption/asymmetric/3.png}
+\pic{pet-media/crypto/encryption/asymmetric/4.png}
+\pic{pet-media/crypto/encryption/asymmetric/5.png}
+\pic{pet-media/crypto/encryption/asymmetric/6.png}
+\pic{pet-media/crypto/encryption/asymmetric/7.png}
+\pic{pet-media/crypto/encryption/asymmetric/1.png}
+\slide{\tiny{Например, публичный ключ выглядит так: }}
+\pic{pet-media/crypto/encryption/asymmetric/gpg-public-key-example.png}
+\slide{\tiny{Например, закрытый ключ выглядит так: }}
+\pic{pet-media/crypto/encryption/asymmetric/gpg-private-key-example.png}
+\slide{Существует \\ обратная операция - \\ "шифрование" закрытым ключом}
+\slide{\textit{Цифровая подпись}}
+\slide{\tiny{Только Боб может создать подпись сообщения, \\ которая связана только с этим сообщением. \\ Её можно проверить с помощью публичного ключа Боба.\\}}
+\slide{\textit{Создание подписи}}
+\pic{pet-media/crypto/signature/signature-create-simplified.png}
+\slide{\textit{Проверка подписи}}
+\pic{pet-media/crypto/signature/signature-verify-simplified.png}
+\slide{\tiny{Например, подписанный документ выглядит так:
+}}
+\pic{pet-media/crypto/signature/gpg-signature-example.png}
+\slide{А что, если замок прислал \\ \textit{не Боб}?}
+\slide{Надо убедиться, \\ что это его ключ}
+\slide{\textit{Ручная проверка \\ публичных ключей}}
+\slide{Можно попросить кого-то подписать публичный ключ \\ \tiny{Если вы доверяете им}}
+\slide{Отпечаток ключа \\ \tiny{Fingerprint}}
+\slide{\tiny{Короткий "эквивалент" публичного ключа. \\ Если отпечатки публичных ключей совпадают, значит совпадают и эти ключи. \\ }}
+\slide{\tiny{Например, отпечаток ключа выглядит так: }}
+\pic{pet-media/crypto/encryption/asymmetric/gpg-fingerprint-example.png}
+\slide{Сквозное шифрование}
+\slide{Собеседники сами генерируют свои ключи}
+\slide{Содержимое доступно только им}
+\slide{Forward Secrecy \\ \tiny{Прямая секретность}}
+\slide{\tiny{При компрометации закрытого ключа предыдущие сообщения не поддаются расшифровке \\ }}
+\slide{Хорошо, \\ мы используем шифрование}
+\slide{Содержание передаваемых нами данных неизвестно}
+\slide{Неужели этого недостаточно?}
+\slide{Метаданные \\ \tiny{данные о данных}}
+\slide{\tiny{Размер, время передачи, место отправки, \\ получатель, источник...\\ }}
+\slide{\tiny{\textit{"Метаданные мало, что дают,\\ собирайте, сколько хотите" \\ }}}
+\slide{Метаданные несут \\ огромную опасность}
+\slide{"Мы убиваем людей \\ на основе метаданных" - \\ \tiny{Майкл Хайден, директор АНБ (1999-2005)}}
+\slide{Наиболее интересны}
+\slide{Универсальны}
+\slide{Не зависят от языка}
+\slide{Малый объем}
+\slide{Из них можно \\ узнать больше, чем \\ из самих данных}
+\slide{\tiny{Любимые места, заболевания, пристрастия, \\ социальные связи, настроение, планы на будущее... \\ }}
+\slide{Теперь с обязательным хранением \\ \tiny{по закону - "до трех лет"}}
+
+\slide{\textit{Важность \\свободного ПО}}
+\slide{Доступность \\ всех деталей \\ и исходного кода}
+\slide{Отсутствие ограничений \\ на использование}
+\slide{Проверяемость \\ \tiny{очень сложно встроить лазейки}}
+\slide{Независимость}
+\slide{\textit{Основные инструменты \\ защиты приватности}}
+\slide{\textit{Защита метаданных, сетевой активности и обход цензуры}}
+
+\pic{pet-media/tools/tor/logo/Tor-logo-2011-flat.png}
+
+\slide{The onion router \\ \tiny{Луковичный маршрутизатор}}
+\slide{Луковичная маршрутизация}
+\slide{Маршрут выбирает пользователь, а не операторы сети}
+\slide{"Не существует вездесущего наблюдателя" \tiny{предположение}}
+\slide{Никто не может контролировать \\ \textit{все} узлы}
+
+\pic{pet-media/nsa/tor/king_red2.png}
+
+\slide{Как устроен Tor?}
+\slide{Без Tor}
+
+
+\pic{pet-media/tools/tor/howitworks/png/internet/1.png}
+\pic{pet-media/tools/tor/howitworks/png/internet/2.png}
+\pic{pet-media/tools/tor/howitworks/png/internet/3.png}
+\pic{pet-media/tools/tor/howitworks/png/internet/4.png}
+\pic{pet-media/tools/tor/howitworks/png/internet/5.png}
+\pic{pet-media/tools/tor/howitworks/png/internet/6.png}
+\pic{pet-media/tools/tor/howitworks/png/internet/7.png}
+\slide{Выход в Интернет через Tor}
+\pic{pet-media/tools/tor/howitworks/png/exit/1.png}
+\pic{pet-media/tools/tor/howitworks/png/exit/2.png}
+\pic{pet-media/tools/tor/howitworks/png/exit/3.png}
+\pic{pet-media/tools/tor/howitworks/png/exit/4.png}
+\pic{pet-media/tools/tor/howitworks/png/exit/5.png}
+\pic{pet-media/tools/tor/howitworks/png/exit/6.png}
+\pic{pet-media/tools/tor/howitworks/png/exit/7.png}
+\pic{pet-media/tools/tor/howitworks/png/exit/8.png}
+\pic{pet-media/tools/tor/howitworks/png/exit/9.png}
+\pic{pet-media/tools/tor/howitworks/png/exit/10.png}
+\pic{pet-media/tools/tor/howitworks/png/exit/11.png}
+\pic{pet-media/tools/tor/howitworks/png/exit/12.png}
+\pic{pet-media/tools/tor/howitworks/png/exit/13.png}
+\slide{\textit{Кто-то} говорит \textit{с кое-кем}}
+\slide{\textit{Выходной релей видит \\ весь траффик!}}
+\slide{Цель: \\\textit{кто-то} говорит с \textit{кем-то}}
+\slide{Луковичные сервисы Tor \\ \tiny{Tor Onion Services}}
+\slide{Анонимность как клиента, \\ так и сервера}
+\slide{Публичные ключи \\ вместо имен \\ \tiny{Достаточно сгенерировать ключевую пару}}
+\slide{\tiny{zkym3uprkoddlxpq.onion}}
+\slide{\tiny{facebookcorewwwi.onion}}
+\slide{Сквозное шифрование}
+\slide{Forward Secrecy}
+\slide{Запускаются везде, \\ где есть tor}
+\pic{pet-media/tools/tor/howitworks/png/rendezvous/1.png}
+\pic{pet-media/tools/tor/howitworks/png/rendezvous/2.png}
+\pic{pet-media/tools/tor/howitworks/png/rendezvous/3.png}
+\pic{pet-media/tools/tor/howitworks/png/rendezvous/4.png}
+\pic{pet-media/tools/tor/howitworks/png/rendezvous/5.png}
+\pic{pet-media/tools/tor/howitworks/png/rendezvous/6.png}
+\pic{pet-media/tools/tor/howitworks/png/rendezvous/7.png}
+\pic{pet-media/tools/tor/howitworks/png/rendezvous/8.png}
+\pic{pet-media/tools/tor/howitworks/png/rendezvous/9.png}
+\pic{pet-media/tools/tor/howitworks/png/rendezvous/10.png}
+\pic{pet-media/tools/tor/howitworks/png/rendezvous/11.png}
+\slide{Tor Browser}
+\slide{Mozilla Firefox* + tor  \\ \tiny{ * с огромным количеством исправлений \\ для повышения приватности\\}}
+\slide{\tiny{Tor Browser \\ выглядит так: \\}}
+\pic{pet-media/tools/tor/tor-browser-screenshot.png}
+\slide{Мосты}
+\slide{Релеи Tor, \\ которых нет  в публичном \\ состоянии сети \\}
+\slide{Используются как \\ входные релеи \\ в цепочках }
+\slide{\tiny{В чистом виде потеряли смысл. \\ Для подключения к мостам используются... \\}}
+\slide{Подключаемые Транспорты \\ \tiny{Pluggable Transports}}
+\slide{Алгоритмы маскировки подключений Tor \\ \tiny{для обхода цензуры}}
+\slide{\textit{Защита чатов}}
+\slide{OTR \\ \tiny{Off-The-Record Messaging}}
+\slide{Почему OTR?}
+\slide{Открытый}
+\slide{Простой}
+\slide{Хорошо проанализирован}
+\slide{Отрицание авторства}
+\slide{Forward Secrecy}
+\pic{pet-media/nsa/no-decrypt/otr-no-decrypt.png}
+\pic{pet-media/tools/otr/png/otr-how1.png}
+\pic{pet-media/tools/otr/png/otr-how2.png}
+\pic{pet-media/tools/otr/png/otr-how3.png}
+\pic{pet-media/tools/otr/png/otr-how4.png}
+\pic{pet-media/tools/otr/png/otr-how5.png}
+\pic{pet-media/tools/otr/png/otr-how6.png}
+\slide{\tiny{Сообщение OTR выглядит так: \\
+?OTRv2?Y3J5cHRvcGFydHkK
+}}
+\slide{В текущей версии протокола \\ нет передачи файлов \\ \tiny{Используйте OnionShare или PGP}}
+\slide{Предпочтительный вариант \\ использования OTR}
+\slide{Протокол XMPP}
+\slide{Похож на эл. почту}
+\slide{\tiny{cryptoparty@jabber.ccc.de}}
+\slide{Децентрализованный}
+\slide{Можно зарегистрироваться \\ на любом сервере}
+\slide{Можно связываться \\ с пользователями на любом сервере}
+\slide{Но не распределенный!}
+
+
+\slide{\textit{Защита файлов и почты}}
+\slide{PGP}
+\slide{Pretty Good Privacy}
+\slide{Почему PGP?}
+\slide{30 лет шифрования \\ "военного уровня"}
+\slide{Многочисленные аудиты}
+\slide{Стандарт интернета}
+\pic{pet-media/nsa/no-decrypt/pgp_no_decrypt.png}
+\slide{Как работает PGP?}
+\pic{pet-media/tools/pgp/pgp_all.png}
+\slide{\tiny{Публичный ключ выглядит так:
+}}
+\pic{pet-media/crypto/encryption/asymmetric/gpg-public-key-example.png}
+\slide{\tiny{Например, зашифрованное сообщение выглядит так:
+}}
+\pic{pet-media/crypto/encryption/gpg-encryption-example.png}
+\slide{Сертификат отзыва}
+\slide{\tiny{Сообщение о недействительности ключа, \\ подписанное самим ключом.\\
+При публикации сертификата \\ ключ "становится недействительным" \\ }}
+\slide{\textit{Защита работы на компьютере}}
+\slide{Tails}
+\slide{Запускается с флешки}
+\slide{Ориентированный на приватность \\ вариант GNU\textbackslash Linux}
+\slide{Все соединения через \\ Tor или I2P}
+\slide{OTR, GPG и все,\\ что нужно для работы}
+\slide{Ссылки}
+\slide{\tiny{Tor \\ https://torproject.org/ \\ Orbot (Android) \\}}
+\slide{\tiny{OTR \\ Pidgin/Adium/CoyIM \\ (Linux, Windows, macOS) \\ Conversations (Android) \\ ChatSecure (iOS, Android) \\}}
+\slide{\tiny{GnuPG \\ https://gnupg.org/ \\ GnuPG+Thunderbird+Enigmail (Desktop) \\OpenKeyChain+K9-Mail (Android) \\ }}
+\slide{\tiny{Tails \\ https://tails.boum.org/ \\}}
+
+
+\end{document}

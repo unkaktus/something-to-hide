@@ -1,0 +1,58 @@
+\documentclass{beamer}
+%\usepackage[orientation=landscape,size=a4,scale=2.7]{beamerposter}
+\usepackage[size=custom,height=21.0,width=33.6,scale=2.7]{beamerposter}
+\usepackage[utf8]{inputenc}
+\usepackage{default}
+\usepackage{graphicx}
+\usepackage{calc}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{color}
+
+\usefonttheme{professionalfonts}
+\usefonttheme{serif}
+
+%\setmainfont{Gill Sans Pro Cyrillic Medium}
+\setmainfont{P22 Underground CY Pro Demi}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+
+\makeatletter
+\define@key{beamerframe}{c}[true]{% centered
+  \beamer@frametopskip=0pt plus 1fill\relax%
+  \beamer@framebottomskip=0pt plus 1fill\relax%
+  \beamer@frametopskipautobreak=0pt plus .4\paperheight\relax%
+  \beamer@framebottomskipautobreak=0pt plus .6\paperheight\relax%
+  \def\beamer@initfirstlineunskip{}%
+}
+\makeatother
+
+\definecolor{slidebg}{HTML}{314046}
+\definecolor{slidefg}{HTML}{DEE2EB}
+
+\definecolor{sgreen}{HTML}{8EB000}
+\definecolor{sred}{HTML}{CF4500}
+
+
+\setbeamercolor{background canvas}{bg=slidebg}
+\setbeamercolor{normal text}{fg=slidefg}
+
+\newcommand{\slide}[1]{
+	\begin{frame}[c]
+	\centering
+	{#1}
+	\end{frame}
+}
+
+\newcommand{\pic}[1]{
+	\begin{frame}[c]
+	\centering
+		\begin{tikzpicture}[remember picture,overlay]
+		    \node[at=(current page.center)] {
+			\includegraphics[width=\paperwidth]{{#1}}
+		    };
+		\end{tikzpicture}
+
+	\end{frame}
+}
+
